@@ -9,6 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 const PORT = process.env.PORT || 5000;
+app.set('port', PORT);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
